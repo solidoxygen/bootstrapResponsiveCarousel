@@ -3,3 +3,9 @@ Bootstrap Carousel that show multiple HTML items that are responsive to screen s
 
 
 This module just extends the default Bootstrap Carousel.  It allows multiple items (images or divs with Html) to show in the carousel.  The carousel displays 5 items at full screen width then as the screen width is reduced the carousel removes items, finally ending with 2 items at the smallest screen width.  The carousel advances one item at a time.
+
+You can view a Demo of this Carousel at 
+http://file-drive.com/files/bootstrapResponsiveCarousel/index.html
+
+You can view an in depth write up here
+http://websnacks.net/2015/11/18/bootstrap-multiple-items-responsive-carousel/

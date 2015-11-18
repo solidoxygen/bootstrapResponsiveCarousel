@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>Bootstrap Carousel with Responsive Items</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <link href="css/carousel.css" rel="stylesheet" type="text/css">
+
+    <style>
+
+
+
+</style>
+  </head>
+  <body>
+
+
+
+
+<div class="container">
+  <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="7000" id="myCarouselGrid">
+
+    <div class="carouselGrid-inner">
+<div class="item active">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/bahama.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/bjs.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/burgerandlobster.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/bww.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/cafelou.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/capitalgrill.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/claimjumper.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/coalspizza.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/coppercellar.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/dishoom.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/drake.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/giraffe.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/granite.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/joey.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/joyluck.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/longhorn.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/olivegarden.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/pickelbarrel.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/redlobster.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/seasons.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/stacked.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/texas.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/veggie.png"></div>
+            </div>
+            <div class="item">
+              <div class="col-lg-15 col-md-3 col-sm-4 col-xs-6"><img src="images/about/whyte.png"></div>
+            </div>
+ 
+    </div>
+    <a class="left carouselGrid-control" href="#myCarouselGrid" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a class="right carouselGrid-control" href="#myCarouselGrid" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+  </div>
+
+
+
+
+
+<script>
+
+$('.carousel[data-type="multi"] .item').each(function(){
+  var next = $(this).next(); // grabs the next sibling of the carouselGrid
+  if (!next.length) { // if ther isn't a next
+    next = $(this).siblings(':first'); // this is the first
+  }
+  next.children(':first-child').clone().appendTo($(this)); // put the next ones on the array
+ 
+
+
+  for (var i=0;i<3;i++) { // THIS LOOP SPITS OUT EXTRA ITEMS TO THE CAROUSEL
+    next=next.next(); 
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+  }
+
+  
+});
+
+
+</script>
+  </body>
+
+
+
+
+
+
+</html>
